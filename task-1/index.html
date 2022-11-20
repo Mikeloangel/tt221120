@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
   <title>Таймер</title>
 </head>
 <body>
-  <form class="timer">
-    <input type="text" class="timer__input" name="ts" placeholder="Seconds">
+  <form class="timer" name="timer">
+    <input type="number" class="timer__input" name="ts" placeholder="Seconds" min="1">
     <button class="timer__submit">Start</button>
     <span class="timer__output">hh:mm:ss</span>
   </form>
