@@ -1,7 +1,6 @@
-@import "./vendor/normalize.css", "./vendor/fonts/inter.css", "./vendor/fonts/monserrat.css";
+@import "./vendor/normalize.css", "./vendor/fonts/inter.css", "./vendor/fonts/monserrat.css", "./utils/variables.scss",
+  "./utils/mixins.scss", "./blocks/body.scss", "./blocks/boundary.scss", "./blocks/header.scss";
 
-$basecolor: green;
-
-h1 {
-  background-color: $basecolor;
+* {
+  // outline: 1px dashed coral;
 }

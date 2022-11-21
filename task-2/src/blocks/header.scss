@@ -1,0 +1,150 @@
+.header {
+  padding: 56px 10px;
+
+  display: grid;
+  grid-template: "logo navigation contact social";
+  grid-template-columns: min-content auto max-content min-content;
+  gap: 50px;
+
+  color: white;
+
+  background-color: transparent;
+
+  @media screen and (max-width: 1280px) {
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template: "logo navigation";
+    grid-template-columns: min-content auto;
+    gap: 15px;
+
+    background-color: $bg-main;
+
+    padding: 15px 10px;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template: "navigation";
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+
+  &__logo-area {
+    grid-area: logo;
+
+    @media screen and (max-width: 700px) {
+      display: none;
+      grid-area: initial;
+    }
+  }
+
+  &__logo {
+    min-width: 140px;
+    min-height: 25px;
+
+    background-image: url(~/src/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__moto {
+    @include fontMotserrat(10px);
+
+    padding: 10px 0 0 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    color: $text-light;
+    letter-spacing: 1px;
+  }
+
+  &__nav {
+    grid-area: navigation;
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+
+    &-list {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+
+      display: flex;
+      gap: 32px;
+
+      @media screen and (max-width: 560px) {
+        gap: 0;
+        justify-content: space-around;
+      }
+    }
+
+    &-item {
+      &_hidden {
+        &_mobile {
+          @media screen and (max-width: 560px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-link {
+      @include fontInter(16px);
+
+      color: $text-light;
+      text-decoration: none;
+
+      @media screen and (max-width: 560px) {
+        @include fontInter(12px);
+        text-transform: uppercase;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      justify-self: center;
+      gap: 16px;
+    }
+  }
+
+  &__contact {
+    @include fontInter(16px);
+
+    grid-area: contact;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    text-align: right;
+    color: #e4e5ea;
+
+    @media screen and (max-width: 1000px) {
+      grid-area: initial;
+      display: none;
+    }
+  }
+
+  &__social {
+    grid-area: social;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+
+    &-link:hover {
+      opacity: 0.5;
+    }
+
+    @media screen and (max-width: 1000px) {
+      grid-area: initial;
+      display: none;
+    }
+  }
+}
