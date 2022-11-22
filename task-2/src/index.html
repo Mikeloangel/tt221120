@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welbex</title>
 </head>
+
 <body class="body">
   <header class="boundary header">
     <div class="header__logo-area">
@@ -18,7 +20,8 @@
         <li class="header__nav-item"><a href="#" class="header__nav-link">Виджеты</a></li>
         <li class="header__nav-item"><a href="#" class="header__nav-link">Интеграции</a></li>
         <li class="header__nav-item"><a href="#" class="header__nav-link">Кейсы</a></li>
-        <li class="header__nav-item header__nav-item_hidden_mobile"><a href="#" class="header__nav-link">Сертификаты</a></li>
+        <li class="header__nav-item header__nav-item_hidden_mobile"><a href="#" class="header__nav-link">Сертификаты</a>
+        </li>
       </ul>
     </nav>
     <p class="header__contact">+7 555 555-55-55</p>
@@ -42,12 +45,93 @@
   </header>
   <main class="boundary main">
     <div class="main__hero">
-      <h1 class="main__hero-title">Зарабатывайте больше <span class="text-gradient">с WELBEX</span></h1>
-      <h2 class="main__hero-subtitle">Развиваем и контролируем продажи за вас</h2>
+      <h1 class="main__hero-title">
+        Зарабатывайте больше
+        <span class="text-gradient main__hero-title-accent">с&nbsp;WELBEX</span>
+      </h1>
+      <p class="main__hero-subtitle">Развиваем и контролируем продажи за вас</p>
     </div>
     <aside class="main__aside">
-
+      <h2 class="main__aside-title">
+        Вместе с <span class="text-gradient main__aside-title-accent">бесплатной консультацией</span>
+        мы дарим:
+      </h2>
+      <ul class="main__aside-list">
+        <li class="main__aside-list-item" data-mobile-order="2">
+          <h3 class="main__aside-list-title" data-role="desktop">Виджеты</h3>
+          <p class="main__aside-list-paragraph" data-role="desktop">30 готовых решений</p>
+          <p class="main__aside-list-paragraph" data-role="mobile">30 виджетов</p>
+        </li>
+        <li class="main__aside-list-item" data-mobile-order="3">
+          <h3 class="main__aside-list-title" data-role="desktop">Dashboard</h3>
+          <p class="main__aside-list-paragraph" data-role="desktop">с показателями
+            вашего бизнеса</p>
+          <p class="main__aside-list-paragraph" data-role="mobile">Dashboard</p>
+        </li>
+        <li class="main__aside-list-item" data-mobile-order="1">
+          <h3 class="main__aside-list-title" data-role="desktop">Skype Аудит</h3>
+          <p class="main__aside-list-paragraph" data-role="desktop">отдела продаж и CRM системы</p>
+          <p class="main__aside-list-paragraph" data-role="mobile">Skype Аудит</p>
+        </li>
+        <li class="main__aside-list-item" data-mobile-order="4">
+          <h3 class="main__aside-list-title" data-role="desktop">35 дней</h3>
+          <p class="main__aside-list-paragraph" data-role="desktop">использования CRM</p>
+          <p class="main__aside-list-paragraph" data-role="mobile">Месяц аmoCRM</p>
+        </li>
+      </ul>
+      <button class="main__aside-button">Получить консультацию</button>
     </aside>
   </main>
+  <footer class="boundary footer">
+    <nav class="footer__about">
+      <h2 class="footer__caption">О компании</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Партнерская программа</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Вакансии</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__menu">
+      <h2 class="footer__caption">Меню</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Расчет стоимости</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Услуги</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Виджеты</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Интеграции</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Наши клиенты</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Кейсы</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Благодарственные письма</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Сертификаты</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Блог на YouTube</a></li>
+        <li class="footer__list-item"><a href="#" class="footer__list-link">Вопрос/ответ</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact">
+      <h2 class="footer__caption">Контакты</h2>
+      <p class="footer__paragraph">+7 555 555-55-55</p>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">
+            <img src="<%=require('./images/telegram.png')%>" alt="Telegram" class="footer__social-ico">
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">
+            <img src="<%=require('./images/viber.png')%>" alt="Viber" class="footer__social-ico">
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">
+            <img src="<%=require('./images/whatsapp.png')%>" alt="WhatsApp" class="footer__social-ico">
+          </a>
+        </li>
+      </ul>
+      <p class="footer__paragraph">Москва, Путевой проезд 3с1, к 902</p>
+    </div>
+    <div class="footer__smallprint">
+      <p class="footer__smallprint-paragraph">&copy;WELBEX 2022. Все права защищены.</p>
+      <p class="footer__smallprint-paragraph"><a href="#" class="footer__smallprint-link">Политика конфиденциальности</a></p>
+    </div>
+  </footer>
 </body>
+
 </html>

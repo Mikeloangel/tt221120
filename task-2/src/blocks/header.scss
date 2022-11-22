@@ -49,14 +49,15 @@
   }
 
   &__moto {
-    @include fontMotserrat(10px);
+    @include fontMontserrat(10px);
 
     padding: 10px 0 0 0;
     margin: 0;
     box-sizing: border-box;
 
     color: $text-light;
-    letter-spacing: 1px;
+
+    opacity: .8;
   }
 
   &__nav {
@@ -114,7 +115,7 @@
 
     grid-area: contact;
 
-    padding: 0;
+    padding: 5px 0 0 0;
     margin: 0;
     box-sizing: border-box;
 

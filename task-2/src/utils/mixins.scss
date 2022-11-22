@@ -1,12 +1,12 @@
-@mixin fontMotserrat($size, $weight : 400) {
+@mixin fontMontserrat($size, $weight: 400) {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: $weight;
-  line-height: 1.2;
   font-size: $size;
+  line-height: 1.2;
 }
 
-@mixin fontInter($size, $weight : 400) {
+@mixin fontInter($size, $weight: 400) {
   font-family: "Inter";
   font-style: normal;
   font-weight: $weight;

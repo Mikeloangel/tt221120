@@ -1,0 +1,217 @@
+.main {
+  box-sizing: border-box;
+  padding-top: 40px;
+
+  display: grid;
+  grid-template-columns: min-content 320px;
+
+  justify-content: space-between;
+
+  @media screen and (max-width: 700px) {
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    gap: 33px;
+  }
+
+  &__hero {
+    padding-left: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (max-width: 700px) {
+      max-width: 400px;
+      padding-top: 23px;
+      gap: 18px;
+    }
+
+    &-title {
+      @include fontInter(48px);
+
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      color: $text-light;
+
+      @media screen and (max-width: 700px) {
+        @include fontInter(36px);
+      }
+
+      &-accent {
+        @include fontInter(48px, 900);
+
+        @media screen and (max-width: 700px) {
+          @include fontInter(36px, 900);
+        }
+      }
+    }
+
+    &-subtitle {
+      @include fontMontserrat(18px, 400);
+
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      width: 80%;
+
+      color: $text-light;
+
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 700px) {
+      align-items: flex-start;
+      max-width: 400px;
+    }
+
+    &-title {
+      @include fontInter(18px, 500);
+
+      padding: 13px 12px 0 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      color: $text-light;
+
+      text-align: right;
+
+      @media screen and (max-width: 700px) {
+        text-align: left;
+      }
+
+      &-accent {
+        @include fontInter(18px, 700);
+
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+
+        @media screen and (max-width: 700px) {
+          text-transform: none;
+        }
+      }
+    }
+
+    &-list {
+      padding: 42px 10px 60px 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px 30px;
+
+      [data-role="mobile"] {
+        display: none;
+      }
+
+      @media screen and (max-width: 700px) {
+        gap: 12px 5px;
+        width: auto;
+        padding: 20px 5px;
+
+        [data-role="desktop"] {
+          display: none;
+        }
+
+        [data-role="mobile"] {
+          display: block;
+
+          @include fontMontserrat(13px);
+
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+
+        [data-role="mobile"]::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 2px;
+          background-image: url(~/src/images/line.png);
+          background-repeat: no-repeat;
+          vertical-align: middle;
+          padding-right: 5px;
+        }
+      }
+
+      &-item {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        @media screen and(max-width: 700px) {
+          &[data-mobile-order="1"] {
+            order: 1;
+          }
+          &[data-mobile-order="2"] {
+            order: 2;
+          }
+          &[data-mobile-order="3"] {
+            order: 3;
+          }
+          &[data-mobile-order="4"] {
+            order: 4;
+          }
+        }
+      }
+
+      &-title {
+        @include fontInter(18px, 500);
+        color: $text-light;
+        text-transform: uppercase;
+        text-align: right;
+
+        padding: 0 0 5px 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 700px) {
+          text-align: left;
+        }
+      }
+
+      &-paragraph {
+        @include fontMontserrat(16px);
+        color: $text-light;
+
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: right;
+
+        @media screen and (max-width: 700px) {
+          text-align: left;
+        }
+      }
+    }
+
+    &-button {
+      @include fontInter(16px, 500);
+
+      color: $text-light;
+      background-color: $bg-secondary;
+
+      padding: 21px 35px;
+      box-sizing: border-box;
+      margin-left: 40px;
+      border: 0;
+
+      @media screen and (max-width: 560px) {
+        display: none;
+      }
+    }
+  }
+}
