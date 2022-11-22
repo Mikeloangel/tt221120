@@ -12,5 +12,18 @@
     url(~/src/images/light-purple.png);
 
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: 38% -60%, 63% 22%, 61% 538px, 0 0, 50% 0;
+  background-position: 35vw 6vh,59vw -2vh,58vw 47vh,-38vw -2vh,11vw -41vh;
+
+  @media screen and (max-width: 1000px) {
+    background-position: 34vw 13vh,60vw 10vh,58vw 47vh,-47vw -15vh,17vw -23vh;
+  }
+
+  @media screen and (max-width: 560px) {
+    background-image: url(~/src/images/ball-purple.png),
+      url(~/src/images/ball-red-small.png),
+      url(~/src/images/light-red.png),
+      url(~/src/images/light-purple.png),
+      url(~/src/images/noise.png);
+    background-position: 83vw 32vh,13vw 65vh,-131vw -8vh,-27vw -55vh,0 0;
+  }
 }
