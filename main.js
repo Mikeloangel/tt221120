@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelector(".main__aside-button").addEventListener("click",(function(){alert("Call me to action!")})),window.addEventListener("load",(function(){document.querySelector("body").style.visibility="visible"}))})();
