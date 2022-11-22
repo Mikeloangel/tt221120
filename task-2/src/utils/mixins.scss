@@ -1,3 +1,6 @@
+// font presets
+
+// apply Montserrat font
 @mixin fontMontserrat($size, $weight: 400) {
   font-family: "Montserrat";
   font-style: normal;
@@ -6,6 +9,7 @@
   line-height: 1.2;
 }
 
+// apply Inter font
 @mixin fontInter($size, $weight: 400) {
   font-family: "Inter";
   font-style: normal;
@@ -14,6 +18,7 @@
   line-height: 1.2;
 }
 
+// apply underline for top level nav items
 @mixin linkNavDecorationOnHover() {
   text-decoration-line: underline;
   text-decoration-thickness: 3px;
