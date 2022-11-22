@@ -57,7 +57,7 @@
 
     color: $text-light;
 
-    opacity: .8;
+    opacity: 0.8;
   }
 
   &__nav {
@@ -102,6 +102,10 @@
         @include fontInter(12px);
         text-transform: uppercase;
       }
+
+      &:hover {
+        @include linkNavDecorationOnHover();
+      }
     }
 
     @media screen and (max-width: 700px) {
@@ -120,7 +124,15 @@
     box-sizing: border-box;
 
     text-align: right;
-    color: #e4e5ea;
+
+    &-link {
+      color: #e4e5ea;
+      text-decoration: none;
+
+      &:hover {
+        @include linkNavDecorationOnHover();
+      }
+    }
 
     @media screen and (max-width: 1000px) {
       grid-area: initial;

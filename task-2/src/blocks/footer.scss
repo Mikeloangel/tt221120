@@ -1,4 +1,238 @@
-.footer{
- display: grid;
- grid-template-columns: 230px auto 300px;
+.footer {
+  display: grid;
+  grid-template-columns: 230px auto 300px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 230px auto 430px;
+    background-color: $bg-main;
+    padding-top: 45px;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-left: 13px;
+
+    gap: 26px;
+  }
+
+  // grid cells
+  &__about {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-left: 8px;
+
+    @media screen and (max-width: 700px) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      padding-left: 0;
+    }
+  }
+
+  &__menu {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 70px;
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 30px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      grid-column: 3/4;
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  &__contact {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding-right: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: fit-content;
+
+    @media screen and (max-width: 1000px) {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+
+      align-items: flex-start;
+      padding-left: 10px;
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+
+      padding-left: 0;
+    }
+  }
+
+  &__smallprint {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    justify-self: end;
+
+    padding: 36px 19px 20px 0;
+
+    @media screen and (max-width: 1000px) {
+      grid-row: 3/4;
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+
+    &-paragraph {
+      @include fontMontserrat(12px, 400);
+      color: $text-light;
+
+      padding: 0 0 5px 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      text-align: right;
+    }
+
+    &-link {
+      @include fontMontserrat(12px, 400);
+      color: $text-light;
+
+      &:hover{
+        opacity: .7;
+      }
+    }
+  }
+
+  //list
+  &__list {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    list-style: none;
+    max-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 6px 53px;
+
+    @media screen and (max-width: 700px) {
+      gap: 3px 30px;
+    }
+
+    &-item {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      width: fit-content;
+
+      &_narrow {
+        @media screen and (max-width: 700px) {
+          max-width: 120px;
+        }
+      }
+    }
+
+    &-link {
+      @include fontInter(16px, 400);
+      color: $text-light;
+      text-decoration: none;
+
+      @media screen and (max-width: 700px) {
+        @include fontInter(14px, 400);
+      }
+
+      &:hover{
+        text-decoration: underline;
+        opacity: .7;
+      }
+    }
+  }
+
+  // social icons
+  &__social {
+    padding: 24px 0 18px 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+    display: flex;
+    gap: 12px;
+
+    @media screen and (max-width: 700px) {
+      padding: 12px 0;
+    }
+
+    &-ico{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      object-position: center;
+
+      @media screen and (max-width: 700px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-link{
+      &:hover{
+        opacity: .7;
+      }
+    }
+  }
+
+  // other items
+  &__caption {
+    @include fontInter(14px, 700);
+
+    padding: 0 0 16px 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    color: $text-darker;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 700px) {
+      @include fontInter(12px, 700);
+    }
+  }
+
+  &__paragraph {
+    @include fontInter(16px, 500);
+    color: $text-light;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 700px) {
+      @include fontInter(14px, 500);
+    }
+  }
+
+  &__contact{
+    &-link{
+      text-decoration: none;
+      color: $text-light;
+
+      &:hover{
+        text-decoration: underline;
+        opacity: .7;
+      }
+    }
+  }
 }
