@@ -5,7 +5,7 @@
 * npm run build - builds project
 * npm run dev - serves development 
 
-## Ссылка 
+## Ссылки
 
-(GitHubPages)[https://mikeloangel.github.io/tt221120/index.html]
+[GitHubPages](https://mikeloangel.github.io/tt221120/index.html)
 
