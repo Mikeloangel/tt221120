@@ -151,13 +151,20 @@
     display: flex;
     gap: 30px;
 
+    @media screen and (max-width: 1000px) {
+      grid-area: initial;
+      display: none;
+    }
+
     &-link:hover {
       opacity: 0.5;
     }
 
-    @media screen and (max-width: 1000px) {
-      grid-area: initial;
-      display: none;
+    &-ico{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }

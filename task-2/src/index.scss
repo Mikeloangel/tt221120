@@ -1,7 +1,3 @@
-@import "./vendor/normalize.css", "./vendor/fonts/inter.css", "./vendor/fonts/monserrat.css", "./utils/variables.scss",
+@import "./vendor/normalize.css", "./utils/variables.scss",
   "./utils/mixins.scss", "./blocks/body.scss", "./blocks/boundary.scss", "./blocks/header.scss",
   "./blocks/text-gradient.scss", "./blocks/main.scss", "./blocks/footer.scss";
-
-* {
-  //  outline: 1px dashed coral;
-}
